@@ -12,14 +12,15 @@ namespace ConsoleAppProject.App01
     public class DistanceConverter
     {
         public static double FEET_IN_MILE = 5280;
-        private double miles, feet;
+        private double miles;
+        private double feet;
         public void Run()
 
         {
             OutputHeading();
             InputMiles();
-            CalculateFeet();
-            OutputFeet();
+            //CalculateFeet();
+            //OutputFeet();
 
             
         }
@@ -31,12 +32,15 @@ namespace ConsoleAppProject.App01
 
         private void CalculateFeet()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void InputMiles()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Please enter the number of miles: ");
+            string input = Console.ReadLine();
+            double miles = Convert.ToDouble(input);
+            Console.WriteLine("Mile entered is:" + miles);
         }
 
         private void OutputHeading()
