@@ -19,19 +19,9 @@ namespace ConsoleAppProject.App01
         {
             OutputHeading();
             InputMiles();
-            //CalculateFeet();
+            CalculateFeet();
             //OutputFeet();
 
-            
-        }
-
-        private void OutputFeet()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CalculateFeet()
-        {
             
         }
 
@@ -39,8 +29,18 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine("Please enter the number of miles: ");
             string input = Console.ReadLine();
-            double miles = Convert.ToDouble(input);
+            miles = Convert.ToDouble(input);
             Console.WriteLine("Mile entered is:" + miles);
+        }
+
+        private void CalculateFeet()
+        {
+            feet = miles * 5280;
+        }
+
+        private void OutputFeet()
+        {
+            Console.WriteLine(miles + " miles is  + feet +  feet!");
         }
 
         private void OutputHeading()
