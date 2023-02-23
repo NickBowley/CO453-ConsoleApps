@@ -21,11 +21,11 @@ namespace ConsoleAppProject.App01
         public const string METRES = "Metres";
         public const string MILES = "Miles";
 
-        private string fromUnit;
-        private string toUnit;
+        public string fromUnit;
+        public string toUnit;
 
-        private double fromDistance;
-        private double toDistance;
+        public double fromDistance;
+        public double toDistance;
 
 
         public DistanceConverter()
@@ -39,19 +39,19 @@ namespace ConsoleAppProject.App01
 
         {
 
-            fromUnit = selectUnit("Please select the from distance unit > ");
-            toUnit = selectUnit("Please select the to distance unit > ");
+            fromUnit = selectUnit(" Please select the from distance unit > ");
+            toUnit = selectUnit(" Please select the to distance unit > ");
 
-            OutputHeading($"Converting {fromUnit} to {toUnit}");
+            Console.WriteLine($" Converting {fromUnit} to {toUnit}");
             
-            fromDistance =  InputDistance($"Please enter the number of {fromUnit} > ");
+            fromDistance =  InputDistance($" Please enter the number of {fromUnit} > ");
 
             CalculateDistance();
             
             OutputDistance();
         }
 
-        private void CalculateDistance()
+        public void CalculateDistance()
         {
             if(fromUnit == MILES && toUnit == FEET) 
             {
