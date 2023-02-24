@@ -35,6 +35,10 @@ namespace ConsoleAppProject.App01
         }
         
 
+       
+        /// <summary>
+        /// 
+        /// </summary>
         public void ConvertDistance()
 
         {
@@ -50,6 +54,10 @@ namespace ConsoleAppProject.App01
             
             OutputDistance();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
 
         public void CalculateDistance()
         {
@@ -134,7 +142,7 @@ namespace ConsoleAppProject.App01
                 $" is {toDistance} {toUnit}!");
         }
 
-        private void OutputHeading(String prompt)
+        public void OutputHeading(String prompt)
         {
             Console.WriteLine("\n----------------------------------");
             Console.WriteLine("    App01 Distance Converter");
