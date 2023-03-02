@@ -1,19 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleAppProject.App02
 {
-    public enum BMI_Status
+    public enum BMIStatus
     {
         None,
         UnderWeight,
+        [Display(Name = "Normal Weight")]
+        [Description("Normal Weight")]
         NormalWeight,
         OverWeight,
-        ObeseI,
+        [Display(Name = "Obese Category 2")]
         ObeseII,
+        [Display(Name = "Obese Category 3")]
         ObeseIII
     }
 }

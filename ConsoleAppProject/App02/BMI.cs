@@ -24,7 +24,7 @@ namespace ConsoleAppProject.App02
         public const int IMPERIAL_FACTOR = 703;
 
         public double BMI_Index { get; set; }
-        public BMI_Status Status { get; set; }
+        public BMIStatus Status { get; set; }
 
         
 
@@ -76,16 +76,16 @@ namespace ConsoleAppProject.App02
         {
 
             Console.WriteLine($"\n Please enter your height" +
-                " in feet and inches");
+                " in feet and inches \n ");
 
-            height = ConsoleHelper.InputNumber($"\n Enter your height in feet > ");
-            int inches = (int)ConsoleHelper.InputNumber($"\n enter inches > ", 0, INCHES_IN_FEET);
+            height = ConsoleHelper.InputNumber($"\n Enter your height in feet > \n ");
+            int inches = (int)ConsoleHelper.InputNumber($"\n enter inches > \n ", 0, INCHES_IN_FEET);
             height = height * INCHES_IN_FEET + inches;
 
-            Console.WriteLine($"\n Please enter your weight in stones and pounds");
+            Console.WriteLine($"\n Please enter your weight in stones and pounds \n ");
 
-            weight = ConsoleHelper.InputNumber($"\n Enter Stones");
-            int pounds = (int)ConsoleHelper.InputNumber($"Enter Pounds > ", 0, POUNDS_IN_STONE);
+            weight = ConsoleHelper.InputNumber($"\n Enter Stones \n ");
+            int pounds = (int)ConsoleHelper.InputNumber($"Enter Pounds > \n ", 0, POUNDS_IN_STONE);
             weight = weight * POUNDS_IN_STONE+ pounds;
 
 
@@ -107,36 +107,50 @@ namespace ConsoleAppProject.App02
         private void CalculateImperial()
 
         {
-            BMI_Index = (weight * IMPERIAL_FACTOR) / (height * height);
+            BMI_Index = (weight * IMPERIAL_FACTOR) / (height*height);
         }
 
         private void CalculateMetric()
 
         {
-            BMI_Index = weight / (height * height);
+            BMI_Index = (weight)/(height*height);
         }
 
-        private void OutputBMI_Index()
+        public void OutputBMI_Index()
 
         {
             if (BMI_Index < 18.50)
             {
-                Status = BMI_Status.UnderWeight;
+                Status = BMIStatus.UnderWeight;
             }
 
             else if (BMI_Index > 18.5 && BMI_Index < 24.9)
             {
-                Status = BMI_Status.NormalWeight;
+                Status = BMIStatus.NormalWeight;
             }
 
-            Console.WriteLine($"Your BMI Index is {BMI_Index} ");
-            Console.WriteLine($"Your BMI Status is {Status} ");
+            else if (BMI_Index > 25.0 && BMI_Index < 29.9)
+            {
+                Status = BMIStatus.OverWeight;
+            }
+
+            else if (BMI_Index > 30.0 && BMI_Index < 39.9)
+
+            {
+                Status = BMIStatus.ObeseII;
+            }
+
+            else if (BMI_Index > 40.0)
+
+            {
+                Status = BMIStatus.ObeseIII;
+            }
+
+            Console.WriteLine($"Your BMI Index is {BMI_Index: 0.00} ");
+            Console.WriteLine($"You are {Status.ToString()} ");
 
         }
         
-        }
-
-
-
     }
+}
 
