@@ -125,7 +125,7 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n ---------------------------------");
             Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
+            Console.WriteLine("     by Nick Bowley           ");
             Console.WriteLine(" ---------------------------------" +
                 "\n");
 
@@ -151,5 +151,7 @@ namespace ConsoleAppProject.Helpers
             Console.WriteLine("\n");
             Console.ResetColor();
         }
+
+        
     }
 }

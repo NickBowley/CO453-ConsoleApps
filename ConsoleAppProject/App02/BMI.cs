@@ -28,21 +28,36 @@ namespace ConsoleAppProject.App02
 
         
 
-        private double height;
-        private double weight;
+        public double height;
+        public double weight;
 
         private string unitChoice;
 
         public void Run()
         {
-            Helpers.ConsoleHelper.OutputHeading("BMI Calculator");
+            
             ConvertBMI();
         }
 
         public void ConvertBMI()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Select the Unit");
+            ConsoleHelper.OutputHeading("BMI Calculator");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(" Your BMI, or Body Mass Index, is a measure" +
+                " \n of your weight compared to your height." +
+                " \n Accurate assessments of obesity are important, as being overweight" +
+                " \n or obese significantly increases your risk of a variety of " +
+                " \n medical conditions including type 2 diabetes, heart disease and cancer.\r\n\r\n" +
+                " \n For most adults, BMI gives a good estimate of your weight-related health risks. " +
+                " \n If your BMI is over 35, your weight is definitely putting your health at risk, " +
+                " \n regardless of the factors below. However, there are some situations where BMI may " +
+                " \n underestimate or overestimate these risks in the 25-35 BMI range. " +
+                "" +
+                " The main ones are:\r\n 1. Children\r\n 2. Pregnant women.\r\n 3. Muscle Builders\r\n 4." +
+                " BAME: Black, Asian and other minority ethnic group");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n Select the Unit");
 
             string[] choices = new string[]
             {
@@ -71,7 +86,7 @@ namespace ConsoleAppProject.App02
             string input = Console.ReadLine();
         }
 
-        private void InputImperial()
+        public void InputImperial()
 
         {
 
@@ -91,7 +106,7 @@ namespace ConsoleAppProject.App02
 
         }
 
-        private void InputMetric()
+        public void InputMetric()
 
         {
             Console.WriteLine($"\n Please enter your height" +
@@ -104,13 +119,13 @@ namespace ConsoleAppProject.App02
             weight = ConsoleHelper.InputNumber($"\n Enter Kilograms");
         }
 
-        private void CalculateImperial()
+        public void CalculateImperial()
 
         {
             BMI_Index = (weight * IMPERIAL_FACTOR) / (height*height);
         }
 
-        private void CalculateMetric()
+        public void CalculateMetric()
 
         {
             BMI_Index = (weight)/(height*height);
@@ -129,7 +144,7 @@ namespace ConsoleAppProject.App02
                 Status = BMIStatus.NormalWeight;
             }
 
-            else if (BMI_Index > 25.0 && BMI_Index < 29.9)
+            else if (BMI_Index > 25.0 && BMI_Index < 30.0)
             {
                 Status = BMIStatus.OverWeight;
             }
@@ -146,8 +161,20 @@ namespace ConsoleAppProject.App02
                 Status = BMIStatus.ObeseIII;
             }
 
-            Console.WriteLine($"Your BMI Index is {BMI_Index: 0.00} ");
-            Console.WriteLine($"You are {Status.ToString()} ");
+            Console.WriteLine($"\n Your BMI index is {BMI_Index: 0.00}");
+            Console.WriteLine();
+            Console.WriteLine($"Your BMI status is {Status}");
+
+            Console.WriteLine("\n If you are Black, Asian, or other minority " +
+                "\n ethnic groups, you have a higher risk have a " +
+                "\n higher risk of developing some long-term " +
+                "\n conditions, such as type 2 diabetes. " +
+                "\n These adults with a BMI of:");
+
+            Console.WriteLine("\n 23.0 or more are at increased risk " +
+                "\n 27.5 or more are at high risk");
+
+
 
         }
         

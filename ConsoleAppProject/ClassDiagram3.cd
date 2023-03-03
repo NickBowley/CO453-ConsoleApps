@@ -1,21 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ConsoleAppProject.App01.DistanceConverter">
-    <Position X="3" Y="0.5" Width="3" />
-    <TypeIdentifier>
-      <HashCode>AgACSgAgEIAAICQQAACCAAABAAAAAEAAAAQAAAQAAAA=</HashCode>
-      <FileName>App01\DistanceConverter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ConsoleAppProject.Program">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="1.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ConsoleAppProject.App01.DistanceConverter" Collapsed="true">
+    <Position X="9" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AgAACAAgAgIAAACQAACmAAABAAAAAAAAAAQAAAQAAIA=</HashCode>
+      <FileName>App01\DistanceConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleAppProject.App02.BMI">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAEQBgAKAAABAACAABAEgACAAAABBgAI=</HashCode>
+      <FileName>App02\BMI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="ConsoleAppProject.App01.DistanceUnits">
-    <Position X="6.5" Y="1.75" Width="1.5" />
+    <Position X="9.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAkAAAgAABAAAAAAAAA=</HashCode>
       <FileName>App01\DistanceUnits.cs</FileName>

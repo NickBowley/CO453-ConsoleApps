@@ -13,7 +13,6 @@ namespace ConsoleAppProject.App02
         None,
         UnderWeight,
         [Display(Name = "Normal Weight")]
-        [Description("Normal Weight")]
         NormalWeight,
         OverWeight,
         [Display(Name = "Obese Category 2")]
