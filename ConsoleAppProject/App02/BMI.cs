@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 namespace ConsoleAppProject.App02
 {
     /// <summary>
-    /// This app will convert the users measurments and generate the BMI of that user. I
+    /// This app will convert the users measurments and generate the BMI of that user.
     /// It will also dislay messages aimed at vulnerable groups based on those measurments.
     /// </summary>
     /// <author>
@@ -33,12 +33,22 @@ namespace ConsoleAppProject.App02
 
         private string unitChoice;
 
+
+        /// <summary>
+        /// This method runs the programme
+        /// </summary>
         public void Run()
         {
             
             ConvertBMI();
         }
 
+
+        /// <summary>
+        /// This method gives the user a choice of imperial or metric. 
+        /// It also presents the main mesage to the user introducing the app
+        /// and a messge to BAME groups.
+        /// </summary>
         public void ConvertBMI()
         {
             ConsoleHelper.OutputHeading("BMI Calculator");
@@ -86,6 +96,10 @@ namespace ConsoleAppProject.App02
             string input = Console.ReadLine();
         }
 
+
+        /// <summary>
+        /// Asks the user to input thier imperial measurments should that be their choice.
+        /// </summary>
         public void InputImperial()
 
         {
@@ -106,6 +120,10 @@ namespace ConsoleAppProject.App02
 
         }
 
+
+        /// <summary>
+        /// Asks the user to input their metric measurments should that be thier choice.
+        /// </summary>
         public void InputMetric()
 
         {
@@ -119,18 +137,28 @@ namespace ConsoleAppProject.App02
             weight = ConsoleHelper.InputNumber($"\n Enter Kilograms");
         }
 
+        /// <summary>
+        /// Calculates the users BMI using thier imperial measurments
+        /// </summary>
         public void CalculateImperial()
 
         {
             BMI_Index = (weight * IMPERIAL_FACTOR) / (height*height);
         }
 
+        /// <summary>
+        /// Calculates the users BMI using thier metric measurments 
+        /// </summary>
         public void CalculateMetric()
 
         {
             BMI_Index = (weight)/(height*height);
         }
 
+
+        /// <summary>
+        /// This calculates the BMI status of the user using more or less than values.
+        /// </summary>
         public void OutputBMI_Index()
 
         {
