@@ -23,6 +23,9 @@ namespace ConsoleAppProject.App03
         public const int HighestGrade = 100;
 
         public string[] Students { get; set; }
+
+        public int[] GradeClass { get; set; }
+        public int[] Marks { get; set; }
        
         /// <summary>
         /// This method will run the programme and output a heading
@@ -37,8 +40,11 @@ namespace ConsoleAppProject.App03
                 //repeat = ConsoleHelper.WantToRepeat();
             }
         }
+        /// <summary>
+        /// This method includes the names of the students, and runs the input, output and calculate methods 
+        /// </summary>
         public StudentGrades()
-            {
+        {
             Students = new string[]
             {
                 "Nick",
@@ -53,9 +59,27 @@ namespace ConsoleAppProject.App03
                 "Bob"
             };
 
-        
+            GradeClass = new int[(int)App03.Grades.A + 1];
+            Marks = new int[Students.Length];
+            
+            InputMarks();
+            OutputMarks();
+
+        }
+        /// <summary>
+        /// This method will allow the user to input the percentage for each of the listed students
+        /// </summary>
+        public void InputMarks()
+        {
+            ConsoleHelper.OutputTitle("Enter Mark for Student");
+            Console.WriteLine("Enter the Percentage for the below students:");
+
+            for (int index = 0; < Students.Length; index++)
+            {
+                Marks[index] = (int)ConsoleHelper.InputNumber($"" +
+                    $"{Students[index]} > ", 0, 100);
+            }
+        }
+
 
     }
-
-
-}
