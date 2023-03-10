@@ -36,6 +36,7 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.WriteLine("| 1. Distance Converter");
             Console.WriteLine("| 2. BMI Calculator");
+            Console.WriteLine("| 3. Student Grades");
 
             Console.WriteLine("Please enter your choice");
             string choice = Console.ReadLine();
@@ -49,6 +50,12 @@ namespace ConsoleAppProject
             {
                 calculator.ConvertBMI();
 
+            }
+
+            else if (choice == "3")
+            {
+                StudentGrades studentGrades = new StudentGrades();
+                studentGrades.Run();
             }
 
             else Console.WriteLine("Invalid Choice");
