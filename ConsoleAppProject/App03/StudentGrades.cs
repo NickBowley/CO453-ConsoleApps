@@ -21,6 +21,8 @@ namespace ConsoleAppProject.App03
         public const int LowestGradeB = 60;
         public const int LowestGradeA = 70;
         public const int HighestGrade = 100;
+
+        public string[] Students { get; set; }
        
         /// <summary>
         /// This method will run the programme and output a heading
@@ -35,6 +37,23 @@ namespace ConsoleAppProject.App03
                 //repeat = ConsoleHelper.WantToRepeat();
             }
         }
+        public StudentGrades()
+            {
+            Students = new string[]
+            {
+                "Nick",
+                "Nicholas",
+                "Nicola",
+                "Nicky",
+                "Nico",
+                "Bob",
+                "Robert",
+                "Rob",
+                "Robby",
+                "Bob"
+            };
+
+        
 
     }
 
