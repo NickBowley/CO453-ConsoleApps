@@ -102,7 +102,6 @@ namespace ConsoleAppProject.App03
                 Console.WriteLine($" {Students[index]} {Marks[index]}% - Grade {grade} | {name}");
             }
         }
-
         /// <summary>
         /// This method converts a student mark to a grade
         /// from F (Fail) to A (First Class)
@@ -135,82 +134,9 @@ namespace ConsoleAppProject.App03
             }
         }
 
-        /// <summary>
-        /// This method calculates and displays the minimum,
-        /// maximum and mean mark for all the students 
-        /// </summary>
-        public void CalculateStats()
-        {
-            double total = 0;
+    
 
-            Minimum = HighestMark;
-            Maximum = 0;
 
-            foreach (int mark in Marks)
-            {
-                total = total + mark;
-                if (mark > Maximum) Maximum = mark;
-                if (mark < Minimum) Minimum = mark;
-            }
-            Mean = total / Marks.Length;
-            OutputStats();
-        }
-
-        /// <summary>
-        /// This method outputs the statistics of all the
-        /// students to give the tutor the minimum, mean
-        /// and maximum of the whole group
-        /// </summary>
-        private void OutputStats()
-        {
-            ConsoleHelper.OutputTitle(" Student Marks Statistics");
-            Console.WriteLine($" No. of students marked = {Marks.Length}");
-            Console.WriteLine($" Minimum mark = {Minimum}");
-            Console.WriteLine($" Mean mark = {Mean}");
-            Console.WriteLine($" Maximum mark = {Maximum}");
-        }
-
-        /// <summary>
-        /// This method calculates a grade profile
-        /// (the percentage of students obtaining each grade)
-        /// </summary>
-        public void CalculateGradeProfile()
-        {
-            for (int i = 0; i < GradeProfile.Length; i++)
-            {
-                GradeProfile[i] = 0;
-            }
-
-            foreach (int mark in Marks)
-            {
-                Grades grade = ConvertToGrade(mark);
-                GradeProfile[(int)grade]++;
-            }
-
-            OutputGradeProfile();
-        }
-
-        /// <summary>
-        /// This method displays the Grade Profile
-        /// (the percentage of students obtaining each grade)
-        /// </summary>
-        private void OutputGradeProfile()
-        {
-            Grades grade = Grades.None;
-            Console.WriteLine("\n Number of students that achieved " +
-                             "the following grades");
-
-            foreach (int count in GradeProfile)
-            {
-                int percentage = count * 100 / Marks.Length;
-                Console.WriteLine($" \n Grade {grade} - {percentage}% | Count {count}");
-                grade++;
-            }
-
-            Console.WriteLine();
-        }
-    }
-}
 
 
 
