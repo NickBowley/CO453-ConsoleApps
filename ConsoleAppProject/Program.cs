@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using ConsoleAppProject.Helpers;
 using System;
 using System.Diagnostics.Metrics;
@@ -37,6 +38,7 @@ namespace ConsoleAppProject
             Console.WriteLine("| 1. Distance Converter");
             Console.WriteLine("| 2. BMI Calculator");
             Console.WriteLine("| 3. Student Grades");
+            Console.WriteLine("| 4. Social Network");
 
             Console.WriteLine("Please enter your choice");
             string choice = Console.ReadLine();
@@ -58,6 +60,11 @@ namespace ConsoleAppProject
                 studentGrades.Run();
             }
 
+            else if (choice == "4")
+            {
+                NetworkApp network = new NetworkApp();
+                network.Run();
+            }
             else Console.WriteLine("Invalid Choice");
 
 
