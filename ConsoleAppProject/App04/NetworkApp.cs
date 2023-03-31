@@ -40,6 +40,14 @@ namespace ConsoleAppProject.App04
 
         private bool quit;
 
+        public Post Post
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// Runs the program, it outputs the
         /// heading all of the options for the user.

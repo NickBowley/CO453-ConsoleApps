@@ -16,12 +16,21 @@ namespace ConsoleAppProject.Helpers
     /// </summary>
     public static class ConsoleHelper
     {
-        public static App03.StudentGrades ConsoleHelper
+        public static Program Program
         {
             get => default;
             set
             {
             }
+        }
+
+        public static App03.StudentGrades GetConsoleHelper()
+        {
+            return default;
+        }
+
+        public static void SetConsoleHelper(App03.StudentGrades value)
+        {
         }
 
         /// <summary>

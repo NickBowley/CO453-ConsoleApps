@@ -30,6 +30,14 @@ namespace ConsoleAppProject
             }
         }
 
+        public NewsFeed NewsFeed
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;

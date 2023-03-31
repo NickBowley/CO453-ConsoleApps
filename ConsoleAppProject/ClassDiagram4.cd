@@ -23,12 +23,9 @@
   <Class Name="ConsoleAppProject.Helpers.ConsoleHelper">
     <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAQAAAAAAAAACAAgAAgAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAIAQAAAAAAAAACAAggAAAAAAAAAAAAAAAACAAAAAIA=</HashCode>
       <FileName>Helpers\ConsoleHelper.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="ConsoleHelper" />
-    </ShowAsAssociation>
   </Class>
   <Enum Name="ConsoleAppProject.App03.Grades">
     <Position X="6.5" Y="0.5" Width="1.5" />
