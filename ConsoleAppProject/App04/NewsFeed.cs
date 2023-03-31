@@ -25,7 +25,7 @@ namespace ConsoleAppProject.App04
         private readonly List<Post> posts;
 
         ///<summary>
-        /// Construct an empty news feed.
+        /// This will display an empty news feed.
         ///</summary>
         public NewsFeed()
         {
@@ -33,7 +33,7 @@ namespace ConsoleAppProject.App04
             MessagePost post = new MessagePost(AUTHOR, "Politics Sucks");
             AddMessagePost(post);
 
-            PhotoPost photoPost = new PhotoPost(AUTHOR, "mydaughter", "Children are a nightmare");
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "mydaughter.png", "Children are a nightmare");
             AddPhotoPost(photoPost);
         }
 
@@ -59,8 +59,7 @@ namespace ConsoleAppProject.App04
         }
 
         ///<summary>
-        /// Show the news feed. Currently: print the news feed details to the
-        /// terminal. (To do: replace this later with display in web browser.)
+        /// This will display the news feed
         ///</summary>
         public void Display()
         {
@@ -68,12 +67,12 @@ namespace ConsoleAppProject.App04
             foreach (Post post in posts)
             {
                 post.Display();
-                Console.WriteLine();   // empty line between posts
+                Console.WriteLine();
             }
         }
 
         /// <summary>
-        /// Finds and retruns a post given a matching ID
+        /// Finds and displays a post if a correct ID is entered.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -83,7 +82,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// Removes a post given a matching ID
+        /// Removes a post if a correct ID is entered
         /// </summary>
         /// <param name="id"></param>
         public void RemovePost(int id)

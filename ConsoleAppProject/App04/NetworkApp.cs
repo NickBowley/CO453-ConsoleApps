@@ -27,7 +27,6 @@ namespace ConsoleAppProject.App04
                 "Like",
                 "Unlike",
                 "Remove Post",
-                "Find Post in time range",
                 "Quit",
         };
 
@@ -63,7 +62,7 @@ namespace ConsoleAppProject.App04
                     case 7: UnlikePost(); break;
                     case 8: RemovePost(); break;
                     case 9: DisplayTimeRangePost(); break;
-                    case 10: quit = true; break;
+                    case 10:quit = true; break;
                 }
             } while (!quit);
         }

@@ -208,6 +208,14 @@ namespace ConsoleAppProject.App03
 
             Console.WriteLine();
         }
+
+        public Grades Grades
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
 
